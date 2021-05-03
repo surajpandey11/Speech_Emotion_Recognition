@@ -1,4 +1,5 @@
 absl-py==0.12.0
+gunicorn==19.9.0
 aiohttp==3.7.4.post0
 aiohttp-cors==0.7.0
 aioredis==1.3.1
