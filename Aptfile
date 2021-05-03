@@ -1,3 +1,5 @@
+sudo apt update
+sudo apt install
 libsndfile1
 libsndfile-dev
 ffmpeg
