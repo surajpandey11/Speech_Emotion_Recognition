@@ -18,15 +18,15 @@ import h5py
 
 app=Flask(__name__)
 
-MODEL_PATH = "models/model2.h5"
-model_2_path="models/rfc.pkl"
-sooraj_model1_path="models/2nd_model.h5"
-sooraj_model2_path="models/model_2d_mfcc.h5"
+MODEL_PATH = "models\model2.h5"
+model_2_path="models\fc.pkl"
+sooraj_model1_path="models\2nd_model.h5"
+sooraj_model2_path="models\model_2d_mfcc.h5"
 # Load  trained modelflask 
-model = h5py.File(MODEL_PATH,'r')
+model = tf.keras.models.load_modelload(MODEL_PATH)
 model_2=pickle.load(open(model_2_path,'rb'))
-sooraj_model1=h5py.File(sooraj_model1_path,'r')
-sooraj_model2=h5py.File(sooraj_model2_path, 'r')
+sooraj_model1=tf.keras.models.load_model(sooraj_model1_path)
+sooraj_model2=tf.keras.models.load_model(sooraj_model2_path)
 
 print('Models loaded. Check http://127.0.0.1:5000/')
 def save_spectrogram1(audio_fname):
