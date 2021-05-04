@@ -13,19 +13,20 @@ import librosa.display
 import matplotlib.pyplot as plt
 from sklearn.ensemble import  RandomForestClassifier
 import pickle
+import h5py
 
 
 app=Flask(__name__)
 
-# MODEL_PATH = "models/model2.h5"
-# model_2_path="models/rfc.pkl"
+MODEL_PATH = "models/model2.h5"
+model_2_path="models/rfc.pkl"
 sooraj_model1_path="models/2nd_model.h5"
 sooraj_model2_path="models/model_2d_mfcc.h5"
 # Load  trained modelflask 
-model = hub.load(MODEL_PATH)
+model = h5py.File(MODEL_PATH,'r')
 model_2=pickle.load(open(model_2_path,'rb'))
-sooraj_model1=hub.load(sooraj_model1_path)
-sooraj_model2=hub.load(sooraj_model2_path)
+sooraj_model1=h5py.File(sooraj_model1_path,'r')
+sooraj_model2=h5py.File(sooraj_model2_path, 'r')
 
 print('Models loaded. Check http://127.0.0.1:5000/')
 def save_spectrogram1(audio_fname):
