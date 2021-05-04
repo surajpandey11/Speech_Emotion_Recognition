@@ -1,1 +1,2 @@
-libsndfile-dev
+apt-get install ffmpeg
+sudo apt-get install libsndfile1
