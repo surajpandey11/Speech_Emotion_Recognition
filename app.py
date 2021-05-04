@@ -17,8 +17,8 @@ import pickle
 
 app=Flask(__name__)
 
-# MODEL_PATH = r'models/model2.h5'
-model_2_path="models/rfc.pkl"
+MODEL_PATH = 'models/model2.h5'
+# model_2_path="models/rfc.pkl"
 sooraj_model1_path="models/2nd_model.h5"
 sooraj_model2_path="models/model_2d_mfcc.h5"
 # Load  trained modelflask 
