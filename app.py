@@ -23,7 +23,7 @@ model_2_path="models\fc.pkl"
 sooraj_model1_path="models\2nd_model.h5"
 sooraj_model2_path="models\model_2d_mfcc.h5"
 # Load  trained modelflask 
-model = tf.keras.models.load_modelload(MODEL_PATH)
+model = tf.keras.models.load_model(MODEL_PATH)
 model_2=pickle.load(open(model_2_path,'rb'))
 sooraj_model1=tf.keras.models.load_model(sooraj_model1_path)
 sooraj_model2=tf.keras.models.load_model(sooraj_model2_path)
